@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <title>Find My Allocation</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="text-center">
+        <br>
+        <h1>Hello, Manager!</h1>
+        <h3>Let's Find Your Monthly Allocation!</h3>
+        <p class="text-primary">To determine a department's allocation, check the box for department.</p>
+        <p class="text-primary">To determine a single team's calculation, simply enter the number of employees below a single manager.</p>
+        <p class="text-danger">**Because this program relies on jQuery click events, you must click in form after all data are input to get an accurate total.**</p>
+        <br>
+    </div>
+      <div class="row">
+
+          <div class="col-8 border border-info p-2">
+            <form id='form'>
+              <div class="form-group">
+                <label for="inputDevs">How many developers do you have?</label>
+                <input type="text" class="form-control" id="devs" placeholder="Enter number of developers on your team">
+              </div>
+              <div class="form-group">
+                <label for="inputQATesters">How many QA Testers? </label>
+                <input type="tex" class="form-control" id="testers" placeholder="Enter number of QA Testers on your team">
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="hasMgr">
+                <label class="form-check-label" for="checkMgr">Check to calculate for entire department (with mulitple managers).</label>
+                <small class="form-text text-muted">Additional managers will <em>only</em> be added to calculation for entire departments.</small>
+                <small class="form-text text-muted"></small>
+              </div>
+              <div id="myCollapse" class="collapse">
+                <div class="form-group">
+                  <label for="inputMgrs">How many managers do you have?</label>
+                  <input type="text" class="form-control" id="mgrs" placeholder="Enter number of managers under your department">
+                </div>
+              </div>
+            </form>
+            <button class="btn btn-success" id="calculate">Calculate!</button>
+            <button class="btn btn-primary" id="clear">Clear Form</button>
+            </div>
+            <div class="col-4">
+              <h2 id="total">Total monthly allocation: $ </h2>
+            </div>
+      </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src='./main.js'></script>
+
+  </body>
+</html>
